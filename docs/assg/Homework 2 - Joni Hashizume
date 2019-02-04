@@ -1,0 +1,46 @@
+Joni Hashizume
+EE 260
+Homework 2
+
+1. Describe the concept known as Moore’s Law.
+- Moore’s Law is named after Gordon Moore. He predicted that the number of chips on a transistor would double ever year or so. In 1965, he noticed that the number of transistors per square inch on integrated circuits had doubled ever year since their invention. 
+
+2. Describe the behavior of the CMOS transistor circuit shown below, clearly indicating when the transistor circuit conducts. 
+- Since this is a pMOS transistor, it conducts when x or y is 0. Therefore, a positive voltage will go through the gate to turn the source and drain into a conductor due to the gate attracting electrons, and then exits through the drain. 
+
+3. If we apply a voltage to the gate of a CMOS transistor, why doesn’t the current flow to the other transistors source or drain?
+- Current does not flow to the other transistors source or drain because once it conducts; it stays within that drain to keep it conducting.
+
+4. Why does applying a positive voltage to the gate of a CMOS transistor cause the transistor to conduct between source and drain?
+- Applying a positive voltage to the gate of a CMOS transistor causes the transistor to conduct between source and drain because the gate attracts the electrons into the channel between the drain and source. The electrons are sufficient to drive the channel form the non conducting to the conducting state.
+
+5. Which Boolean operation, AND, OR, or, NOT, is appropriate for each of the following:
+a)	Detecting motion in any motion sensor surrounding a house (each motion sensor outputs 1 when motion is detected).
+This situation would use the OR operation. It is detecting motion in any motion sensor surrounding a house (1) and (0) being that there is no motion. 1 OR 0 OR 0 = 1 which is saying that there is motion sensed around some part of the house. 
+
+b)	Detecting that three buttons are being pressed simultaneously (each button outputs 1 when a button is being pressed).
+The Boolean operation we must use is either AND. This situation is asking to detect when three buttons are pressed simultaneously, and a button outputs 1 when a button is pressed. Therefore, 1 AND 1 AND 0 = 0 which means that only two buttons are pressed simultaneously (1) and the third one is not (0).  
+
+c)	Detecting the absence of a light form a light sensor (the light sensor outputs 1 when the light is sensed).
+This situation would use a NOT operation because we are detecting the absence of a light. If a light sensor outputs 1 when the light is sensed, then we must look for the opposite of that which is 0. 1 NOT 0 = 0.
+
+6. Evaluate the Boolean equation F = (a AND b) OR c OR d for the given values of variables a, b, c, and d:
+a)	 a=1, b=1, c=1, d=0
+F = (1 AND 1) OR 1 OR 0 = 1 OR 1 OR 0 = 1 OR 0 = 1
+b)	a=0, b=1, c=1, d=0
+F = (0 AND 1) OR 1 OR 0 = 0 OR 1 OR 0 = 1 OR 0 = 1
+c)	a=1, b=1, c=0, d=0
+F = (1 AND 1) OR 0 OR 0 = 1 OR 0 OR 0 = 1 OR 0 = 1
+d)	a=1, b=0, c=1, d=1
+F = (1 AND 1) OR 1 OR 1 = 1 OR 1 OR 1 = 1 OR 1 = 1
+
+7. Convert each of the following equations to the gate-level circuits:
+a)	F=ab’ + bc + c’
+
+b)	F=ab + b’c’d’
+
+c)	F=((a+b’)*(c’+d))+(c+d+e’)
+
+8.  We want to concisely describe the following situation using a Boolean equation. We want to fire a football coach (by setting F=1) if he is mean (represented by M=1). If he is not mean, but has a losing season (represented by the Boolean variable L=1), we want to fire him anyways. Write and equation that translates the situation directly to a Boolean equation for F, without any simplification. 
+F = M + (M’L)
+The Boolean equation would be F = M + (M’L) because we want the output F to be 1. Therefore, we will fire the coach if he is mean (M=1), but if he is not mean (M’) and has a losing season (L=1) then we will fire him anyway. 
